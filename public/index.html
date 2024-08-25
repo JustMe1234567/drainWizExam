@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DrainWiz</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="flex bg-[#aec470] mx-auto w-full py-2 px-5 md:px-10 items-center"
+    >
+      <div class="flex gap-2 flex-1 items-center">
+        <!-- Logo -->
+        <img
+          class="w-10 md:w-14 shadow-xl rounded-[100%] bg-white object-cover hover:cursor-pointer"
+          src="./images/logo.jpg"
+          alt="logo"
+        />
+        <!-- Title -->
+        <h1
+          class="text-xs sm:text-[20px] md:text-xl md:block md:text-[25px] font-semibold lg:text-[30px]"
+        >
+          VELEZ COLLEGE
+        </h1>
+      </div>
+      <ul class="flex flex-none gap-1 sm:gap-3 items-center">
+        <!-- Data Privacy -->
+        <li
+          class="text-[12px] hover:cursor-pointer hover:bg-transparent px-1 py-1 hover:px-1 hover:py-1 rounded-[5px] sepia-[25%] sm:text-sm"
+        >
+          Data Privacy
+        </li>
+        <!-- Darkmode -->
+        <li>
+          <img
+            class="w-6 rounded-[100%] object-cover grayscale hover:cursor-pointer sm:w-10"
+            src="./images/night-mode.png"
+            alt=""
+          />
+          <!-- <img
+            class="w-9 h-9 shadow-xl rounded-[100%] object-cover grayscale hover:cursor-pointer"
+            src="../src/images/night-mode.png"
+            alt=""
+          /> -->
+        </li>
+        <!-- Profile Icon -->
+        <li>
+          <img
+            class="w-5 shadow-xl rounded-[100%] object-cover sepia-[50%] hover:cursor-pointer sm:w-10"
+            src="./images/profile.png"
+            alt="logo"
+          />
+        </li>
+      </ul>
+    </nav>
+    <!-- Add or Search Studdent -->
+    <header
+      class="bg-[#f3f4f8] text-xs sm:text-sm p-4 flex justify-center w-full gap-4"
+    >
+      <div
+        class="flex items-center justify-center w-full p-2 bg-slate-300 hover:cursor-pointer"
+      >
+        <a href="add.html">Add Student</a>
+      </div>
+      <div class="flex items-center justify-center w-full p-2 bg-slate-300">
+        <a href="search.html">Search Student</a>
+      </div>
+    </header>
+    <!-- Aplication chuchus -->
+    <main
+      id="applicant-main"
+      class="hidden bg-[#f3f4f8] px-5 py-5 font-semibold w-full"
+    >
+      <h1 class="text-black text-[20px]">Latest Applicant</h1>
+      <!-- Applicant Name -->
+      <p class="font-normal">
+        Applicant:
+        <span
+          id="applicant-name"
+          class="text-blue-600 underline underline-offset-4"
+        ></span>
+      </p>
+      <!-- Applicant Statuses -->
+      <div class="mt-4 items-center justify-center">
+        <div class="flex sm:gap-5 sm:text-sm md:text-md">
+          <!-- Application Status -->
+          <div class="flex sm:text-sm md:text-md lg:text-lg xl:text-xl">
+            <img class="w-5 hidden" src="./images/logo.jpg" alt="" />
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">
+                Application Status
+              </p>
+              <h1
+                class="text-[12px] sm:text-sm text-orange-500 font-semibold mt-2"
+              >
+                Pending
+              </h1>
+            </div>
+          </div>
+          <!-- Academic Term -->
+          <div class="flex">
+            <img class="w-5 hidden" src="./images/logo.jpg" alt="" />
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">Academic Term</p>
+              <h1 class="text-[12px] sm:text-sm font-semibold mt-2">####</h1>
+            </div>
+          </div>
+          <!-- Application Number -->
+          <div class="flex">
+            <img class="w-5 hidden" src="./images/logo.jpg" alt="" />
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">
+                Application Number
+              </p>
+              <h1 class="text-[12px] sm:text-sm font-semibold mt-2">####</h1>
+            </div>
+          </div>
+          <!-- Written Exam Schedule -->
+          <div class="flex">
+            <img class="w-5 hidden" src="./images/logo.jpg" alt="" />
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">
+                Written Exam Schedule
+              </p>
+              <h1 class="text-[12px] sm:text-sm font-semibold mt-2">None</h1>
+            </div>
+          </div>
+          <!-- Interview Schedule -->
+          <div class="flex">
+            <img class="w-5 hidden" src="./images/logo.jpg" alt="" />
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">
+                Interview Schedule
+              </p>
+              <h1 class="text-[12px] sm:text-sm font-semibold mt-2">None</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <hr class="border-gray-400 mx-5 bg-[#f3f4f8]" />
+    <!-- Student Information -->
+    <section
+      id="student-info"
+      class="hidden bg-[#f3f4f8] h-full py-4 md:text-xl lg:xl"
+    >
+      <div class="mx-5">
+        <h1 class="font-semibold mb-4">Student Information</h1>
+        <!-- Student Data -->
+        <div class="flex">
+          <div
+            class="w-[40%] sm:w-[20%] lg:w-[5%] text-sm sm:text-sm md:text-md lg:text-lg"
+          >
+            <h1>Student ID</h1>
+            <h1>Applicant Code</h1>
+            <h1>Name</h1>
+            <h1>Mobile No.</h1>
+            <h1>Email</h1>
+          </div>
+          <div
+            class="w-[60%] sm:w-[80%] lg:w-[95%] text-sm sm:text-sm md:text-md lg:text-lg"
+          >
+            <h1 id="student-id"></h1>
+            <h1 id="applicant-code"></h1>
+            <h1 id="student-name"></h1>
+            <h1 id="mobile-number"></h1>
+            <h1 id="email"></h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="loading" class="mx-5 mt-5 text-lg">Loading...</section>
+    <section id="no-applicants" class="hidden mx-5 mt-5 text-lg tracking-wide">
+      No Applicants Yet.
+    </section>
+  </body>
+</html>

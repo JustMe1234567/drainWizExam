@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Search User</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./search.js"></script>
+  </head>
+  <body>
+    <nav
+      class="flex bg-[#aec470] mx-auto w-full py-2 px-5 md:px-10 items-center"
+    >
+      <div class="flex gap-2 flex-1 items-center">
+        <!-- Logo -->
+        <a href="index.html">
+          <img
+            class="w-10 md:w-14 shadow-xl rounded-[100%] bg-white object-cover hover:cursor-pointer"
+            src="./images/logo.jpg"
+            alt="logo"
+        /></a>
+        <!-- Title -->
+        <h1
+          class="text-xs sm:text-[20px] md:text-xl md:block md:text-[25px] font-semibold lg:text-[30px]"
+        >
+          VELEZ COLLEGE
+        </h1>
+      </div>
+      <ul class="flex flex-none gap-1 sm:gap-3 items-center">
+        <!-- Data Privacy -->
+        <li
+          class="text-[12px] hover:cursor-pointer hover:bg-transparent px-1 py-1 hover:px-1 hover:py-1 rounded-[5px] sepia-[25%] sm:text-sm"
+        >
+          Data Privacy
+        </li>
+        <!-- Darkmode -->
+        <li>
+          <img
+            class="w-6 rounded-[100%] object-cover grayscale hover:cursor-pointer sm:w-10"
+            src="./images/night-mode.png"
+            alt=""
+          />
+          <!-- <img
+            class="w-9 h-9 shadow-xl rounded-[100%] object-cover grayscale hover:cursor-pointer"
+            src="../src/images/night-mode.png"
+            alt=""
+          /> -->
+        </li>
+        <!-- Profile Icon -->
+        <li>
+          <img
+            class="w-5 shadow-xl rounded-[100%] object-cover sepia-[50%] hover:cursor-pointer sm:w-10"
+            src="./images/profile.png"
+            alt="logo"
+          />
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Search Student -->
+    <div class="px-5 pt-4 text-xs flex-start content-center bg-[#f3f4f8]">
+      <a class="sm:text-sm md:text-md lg:text-lg" href="index.html"
+        >&lt;&lt; Go Back</a
+      >
+      <div class="flex mt-3 text-sm items-center gap-2">
+        <label for="search-name"
+          ><span class="font-semibold text-sm md:text-md lg:text-xl"
+            >Search</span
+          ></label
+        >
+        <input
+          class="focus:outline-none focus:ring-0 bg-slate-50 border border-gray-200 rounded p-2 w-full sm:w-80 md:w-[500px]"
+          type="text"
+          name="search-name"
+          id="name"
+          placeholder="Enter name"
+        />
+      </div>
+      <!-- Lists of Names -->
+      <div id="show-list" class="relative ml-[50px] lg:ml-[67px] text-sm">
+        <div
+          id="show-names"
+          class="hidden bg-white p-2 absolute w-full border border-gray-300 rounded-sm sm:w-80 md:w-[500px]"
+        ></div>
+      </div>
+    </div>
+    <!-- Aplication chuchus -->
+    <main
+      id="application"
+      class="hidden bg-[#f3f4f8] px-5 py-5 font-semibold w-full"
+    >
+      <h1 class="text-black text-[20px]">Application Console</h1>
+      <!-- Applicant Name -->
+      <p class="font-normal">
+        Applicant:
+        <span
+          id="applicant-name"
+          class="text-blue-600 underline underline-offset-4"
+        ></span>
+      </p>
+
+      <div class="mt-4 items-center justify-center">
+        <div class="flex gap-5">
+          <!-- Application Status -->
+          <div class="flex">
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">
+                Application Status
+              </p>
+              <h1
+                class="text-[12px] sm:text-[18px] text-orange-500 font-semibold mt-2"
+              >
+                Pending
+              </h1>
+            </div>
+          </div>
+          <!-- Academic Term -->
+          <div class="flex">
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">Academic Term</p>
+              <h1 class="text-[12px] sm:text-[18px] font-semibold mt-2">
+                ####
+              </h1>
+            </div>
+          </div>
+          <!-- Application Number -->
+          <div class="flex">
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">
+                Application Number
+              </p>
+              <h1 class="text-[12px] sm:text-[18px] font-semibold mt-2">
+                ####
+              </h1>
+            </div>
+          </div>
+          <!-- Written Exam Schedule -->
+          <div class="flex">
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">
+                Written Exam Schedule
+              </p>
+              <h1 class="text-[12px] sm:text-[18px] font-semibold mt-2">
+                None
+              </h1>
+            </div>
+          </div>
+          <!-- Interview Schedule -->
+          <div class="flex">
+            <div class="flex-col">
+              <p class="text-[10px] sm:text-sm font-light">
+                Interview Schedule
+              </p>
+              <h1 class="text-[12px] sm:text-[18px] font-semibold mt-2">
+                None
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border-gray-400 mt-5" />
+      <div class="flex text-xs sm:text-sm md:text-md lg:text-lg">
+        <div class="w-[40%] mt-4">
+          <div class="mb-2">Student ID</div>
+          <div class="mb-2">School Code</div>
+          <div class="mb-2">Applicant Code ID</div>
+          <div class="mb-2">Applicant No.</div>
+          <div class="mb-2">Last Name</div>
+          <div class="mb-2">First Name</div>
+          <div class="mb-2">Middle Name</div>
+          <div class="mb-2">Suffix</div>
+          <div class="mb-2">Full Name</div>
+          <div class="mb-2">Mobile Number</div>
+          <div class="mb-2">Email</div>
+        </div>
+        <div class="w-[60%] mt-4">
+          <h1 class="mb-2" id="student-id"></h1>
+          <h1 class="mb-2" id="school-code"></h1>
+          <h1 class="mb-2" id="applicant-code"></h1>
+          <h1 class="mb-2" id="applicant-number"></h1>
+          <h1 class="mb-2" id="last-name"></h1>
+          <h1 class="mb-2" id="first-name"></h1>
+          <h1 class="mb-2" id="middle-name"></h1>
+          <h1 class="mb-2" id="suffix"></h1>
+          <h1 class="mb-2" id="full-name"></h1>
+          <h1 class="mb-2" id="mobile-number"></h1>
+          <h1 class="mb-2" id="email"></h1>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
